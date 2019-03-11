@@ -9,99 +9,194 @@
                 <p id="demo"></p>
             <script>
                 var num1 = +prompt("Ввведите Ваше число")
+                var x
+                var y
+                var z
                 //var num_array_1 = [["0", "гривен"]["1", "одна гривна"]["2", "две гривны"]["3", "три гривны"]["1", "четыре гривны"]["1", "пять гривен"]["1", "шесть гривен"]["1", "семь гривен"]["1", "восемь гривен"]["1", "девять гривен"]];
-
-                var x = num1;
-
-                if (num1 > 9 ); {
-                    var num3 = num1
-                    var num2 = num1
-                    num2 = Math.floor(num1/10)
-                    num1 = num3 - num2*10
-                    console.log(num3, num2, num1)
-                    var y = num2
-                    x = num1
-
-                    switch (y) {
-                        case 0:
-                        text1 = "";
-                        break;
-                        case 1:
-                        text1 = "десять ";            
-                        break;
-                        case 2:
-                        text1 = "двадцать ";            
-                        break;
-                        case 3:
-                        text1 = "тридцать ";            
-                        break;
-                        case 4:
-                        text1 = "сорок ";            
-                        break;
-                        case 5:
-                        text1 = "пятьдесят ";            
-                        break;
-                        case 6:
-                        text1 = "шестьдесят ";            
-                        break;
-                        case 7:
-                        text1 = "семьдеят ";            
-                        break;
-                        case 8:
-                        text1 = "восемьдесят ";            
-                        break;
-                        case 9:
-                        text1 = "девяносто ";            
-                        break;
-                        default:
-                        text1 = "больше 90";}
-
-                        switch (x) {
-                        case 0:
-                        text = "ноль гривен";
-                        break;
-                        case 1:
-                        text = "одна гривна";            
-                        break;
-                        case 2:
-                        text = "две гривны";            
-                        break;
-                        case 3:
-                        text = "три гривны";            
-                        break;
-                        case 4:
-                        text = "четыре гривны";            
-                        break;
-                        case 5:
-                        text = "пять гривен";            
-                        break;
-                        case 6:
-                        text = "шесть гривен";            
-                        break;
-                        case 7:
-                        text = "семь гривен";            
-                        break;
-                        case 8:
-                        text = "восемь гривен";            
-                        break;
-                        case 9:
-                        text = "девять гривен";            
-                        break;
-                        default:
-                        text = "";
-                    }
+                if (num1 < 1 || num1 > 999)   {
+                    text = "Введите число от 1 до 999 включительно"
                 }
 
+                else if (num1 > 1) {
+                        if (num1 >= 20) {
+                                let num4 = num1
+                                let num_100 = Math.floor(num1/100)
+                                let num_10 = Math.floor((num4 - num_100*100)/10)
+                                if (num_10 = 1)
+                                 {
+                                    num_10 = num4 - num_100*100
+                                    }
+                                let num_1 = num4 - num_100 *100- num_10*10
+                                z = num_100
+                                y = num_10
+                                x = num_1
+                            }
+
+                        else if (num1 > 99 && num1 < 1000) {
+                                let num4 = num1
+                                let num_100 = Math.floor(num1/100)
+                                let num_10 = Math.floor((num4 - num_100*100)/10)
+                                let num_1 = num4 - num_100 *100- num_10*10
+                                z = num_100
+                                y = num_10
+                                x = num_1
+                            }
+
+                        else if (num1 < 20) {
+                                x = num1
+                                y = 0
+                                z = 0
+                            } 
+                        }
+                        console.log(z,y,x)
+                
+
+                
+            
+
+                        switch (z) {
+                            case 0:
+                            text1 = "";
+                            break;
+                            case 1:
+                            text1 = "сто ";            
+                            break;
+                            case 2:
+                            text1 = "двести ";            
+                            break;
+                            case 3:
+                            text1 = "триста ";            
+                            break;
+                            case 4:
+                            text1 = "четыресто ";            
+                            break;
+                            case 5:
+                            text1 = "пятьсот ";            
+                            break;
+                            case 6:
+                            text1 = "шестьсот ";            
+                            break;
+                            case 7:
+                            text1 = "семьсот ";            
+                            break;
+                            case 8:
+                            text1 = "восемьсот ";            
+                            break;
+                            case 9:
+                            text1 = "девятьсот ";            
+                            break;
+                            default:
+                            text1 = "";}
+
+                        switch (y) {
+                            case 0:
+                            text2 = "";
+                            break;
+                            case 1:
+                            text2 = "";            
+                            break;
+                            case 2:
+                            text2 = "двадцать ";            
+                            break;
+                            case 3:
+                            text2 = "тридцать ";            
+                            break;
+                            case 4:
+                            text2 = "сорок ";            
+                            break;
+                            case 5:
+                            text2 = "пятьдесят ";            
+                            break;
+                            case 6:
+                            text2 = "шестьдесят ";            
+                            break;
+                            case 7:
+                            text2 = "семьдесят ";            
+                            break;
+                            case 8:
+                            text2 = "восемьдесят ";            
+                            break;
+                            case 9:
+                            text2 = "девяносто ";            
+                            break;
+                            default:
+                            text2 = "";}
+
+                        switch (x) {
+                            case 0:
+                            text = "гривен";
+                            break;
+                            case 1:
+                            text = "одна гривна";            
+                            break;
+                            case 2:
+                            text = "две гривны";            
+                            break;
+                            case 3:
+                            text = "три гривны";            
+                            break;
+                            case 4:
+                            text = "четыре гривны";            
+                            break;
+                            case 5:
+                            text = "пять гривен";            
+                            break;
+                            case 6:
+                            text = "шесть гривен";            
+                            break;
+                            case 7:
+                            text = "семь гривен";            
+                            break;
+                            case 8:
+                            text = "восемь гривен";            
+                            break;
+                            case 9:
+                            text = "девять гривен";  
+                            case 10:
+                            text = "десять гривен";            
+                            break;
+                            case 11:
+                            text = "одиннадцать гривен";            
+                            break;
+                            case 12:
+                            text = "двенадцать гривен";            
+                            break;
+                            case 13:
+                            text = "тринадцать гривен";            
+                            break;
+                            case 14:
+                            text = "четырнадцать гривен";            
+                            break;
+                            case 15:
+                            text = "пятьнадцать гривен";            
+                            break;
+                            case 16:
+                            text = "шестьнадцать";            
+                            break;
+                            case 17:
+                            text = "семнадцать гривен";            
+                            break;
+                            case 18:
+                            text = "восемьнадцать гривен"          
+                            break;
+                            case 19:
+                            text = "девятнадцать гривен"          
+                            break;
+                            default:
+                            text = "";
+                        }                
+                
+                
                    
                     
 
                    
                     
-                    document.getElementById("demo").innerHTML = text1 + text;
+    document.getElementById("demo").innerHTML = text1 + text2 + text;
 
                                         
                     
-                    console.log(num1)
+    console.log(num1)
 
             </script>
         </body>
