@@ -1,1 +1,108 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <meta charset="UTF-8">
 
+            <title> Number to Word</title>
+        </head>
+        <body>
+                <p id="demo"></p>
+            <script>
+                var num1 = +prompt("Ввведите Ваше число")
+                //var num_array_1 = [["0", "гривен"]["1", "одна гривна"]["2", "две гривны"]["3", "три гривны"]["1", "четыре гривны"]["1", "пять гривен"]["1", "шесть гривен"]["1", "семь гривен"]["1", "восемь гривен"]["1", "девять гривен"]];
+
+                var x = num1;
+
+                if (num1 > 9 ); {
+                    var num3 = num1
+                    var num2 = num1
+                    num2 = Math.floor(num1/10)
+                    num1 = num3 - num2*10
+                    console.log(num3, num2, num1)
+                    var y = num2
+                    x = num1
+
+                    switch (y) {
+                        case 0:
+                        text1 = "";
+                        break;
+                        case 1:
+                        text1 = "десять ";            
+                        break;
+                        case 2:
+                        text1 = "двадцать ";            
+                        break;
+                        case 3:
+                        text1 = "тридцать ";            
+                        break;
+                        case 4:
+                        text1 = "сорок ";            
+                        break;
+                        case 5:
+                        text1 = "пятьдесят ";            
+                        break;
+                        case 6:
+                        text1 = "шестьдесят ";            
+                        break;
+                        case 7:
+                        text1 = "семьдеят ";            
+                        break;
+                        case 8:
+                        text1 = "восемьдесят ";            
+                        break;
+                        case 9:
+                        text1 = "девяносто ";            
+                        break;
+                        default:
+                        text1 = "больше 90";}
+
+                        switch (x) {
+                        case 0:
+                        text = "ноль гривен";
+                        break;
+                        case 1:
+                        text = "одна гривна";            
+                        break;
+                        case 2:
+                        text = "две гривны";            
+                        break;
+                        case 3:
+                        text = "три гривны";            
+                        break;
+                        case 4:
+                        text = "четыре гривны";            
+                        break;
+                        case 5:
+                        text = "пять гривен";            
+                        break;
+                        case 6:
+                        text = "шесть гривен";            
+                        break;
+                        case 7:
+                        text = "семь гривен";            
+                        break;
+                        case 8:
+                        text = "восемь гривен";            
+                        break;
+                        case 9:
+                        text = "девять гривен";            
+                        break;
+                        default:
+                        text = "";
+                    }
+                }
+
+                   
+                    
+
+                   
+                    
+                    document.getElementById("demo").innerHTML = text1 + text;
+
+                                        
+                    
+                    console.log(num1)
+
+            </script>
+        </body>
+    </html>
